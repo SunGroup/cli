@@ -11,7 +11,7 @@
 ## killall telegram-cli
 
 
-## tmux new-session -s script "bash steady.sh -t"
+## screen ./launch.sh
 
 
 ## ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ

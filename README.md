@@ -1,3 +1,7 @@
+## cd cli
+
+## git pull
+
 ## kill $(pgrep telegram-cli) 
 
 ## killall screen 

@@ -115,9 +115,9 @@ end
 --Get and output info about supergroup
 local function callback_info(cb_extra, success, result)
 local title ="Info for SuperGroup: ["..result.title.."]\n\n"
-local admin_num = "Admin contact: "..result.admins_count.."\n"
-local user_num = "User contact: "..result.participants_count.."\n"
-local kicked_num = "Kicked user contact: "..result.kicked_count.."\n"
+local admin_num = "Admin Contact: "..result.admins_count.."\n"
+local user_num = "User Contact: "..result.participants_count.."\n"
+local kicked_num = "Kicked User Contact: "..result.kicked_count.."\n"
 local channel_id = "SuperGroup ID: "..result.peer_id.."\n"
 if result.username then
 	channel_username = "Username: @"..result.username

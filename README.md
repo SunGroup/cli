@@ -1,4 +1,10 @@
-kill $(pgrep telegram-cli) && killall screen && killall tmux && killall telegram-cli
+kill $(pgrep telegram-cli) 
+&& 
+killall screen 
+&& 
+killall tmux 
+&& 
+killall telegram-cli
 
 
 tmux new-session -s script "bash steady.sh -t"

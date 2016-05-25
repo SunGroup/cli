@@ -5,7 +5,7 @@ local function check_member_super(cb_extra, success, result)
   local data = cb_extra.data
   local msg = cb_extra.msg
   if success == 0 then
-	send_large_msg(receiver, "Promote me to admin first!")
+	send_large_msg(receiver, "Promote Me To Admin First")
   end
   for k,v in pairs(result) do
     local member_id = v.peer_id
@@ -39,7 +39,7 @@ local function check_member_super(cb_extra, success, result)
       end
       data[tostring(groups)][tostring(msg.to.id)] = msg.to.id
       save_data(_config.moderation.data, data)
-	  local text = 'SuperGroup has been Install'
+	  local text = 'SuperGroup Has Been Install'
       return reply_msg(msg.id, text, ok_cb, false)
     end
   end
@@ -63,7 +63,7 @@ local function check_member_superrem(cb_extra, success, result)
       end
       data[tostring(groups)][tostring(msg.to.id)] = nil
       save_data(_config.moderation.data, data)
-	  local text = 'SuperGroup has been UnInstall'
+	  local text = 'SuperGroup Has Been UnInstall'
       return reply_msg(msg.id, text, ok_cb, false)
     end
   end
@@ -1126,10 +1126,10 @@ local function run(msg, matches)
 				return
 			end
 			if is_super_group(msg) then
-				return reply_msg(msg.id, 'SuperGroup is already added.', ok_cb, false)
+				return reply_msg(msg.id, 'SuperGroup Is Already Install', ok_cb, false)
 			end
-			print("SuperGroup "..msg.to.print_name.."("..msg.to.id..") added")
-			savelog(msg.to.id, name_log.." ["..msg.from.id.."] added SuperGroup")
+			print("SuperGroup "..msg.to.print_name.."("..msg.to.id..") Install")
+			savelog(msg.to.id, name_log.." ["..msg.from.id.."] Install SuperGroup")
 			superadd(msg)
 			set_mutes(msg.to.id)
 			channel_set_admin(receiver, 'user#id'..msg.from.id, ok_cb, false)
@@ -1137,9 +1137,9 @@ local function run(msg, matches)
 
 		if matches[1] == 'rem' and is_admin1(msg) and not matches[2] then
 			if not is_super_group(msg) then
-				return reply_msg(msg.id, 'SuperGroup is not added.', ok_cb, false)
+				return reply_msg(msg.id, 'SuperGroup Is NOT Install', ok_cb, false)
 			end
-			print("SuperGroup "..msg.to.print_name.."("..msg.to.id..") removed")
+			print("SuperGroup "..msg.to.print_name.."("..msg.to.id..") UnInstall")
 			superrem(msg)
 			rem_mutes(msg.to.id)
 		end

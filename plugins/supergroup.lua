@@ -1268,7 +1268,7 @@ local function run(msg, matches)
 				resolve_username(username,  callbackres, cbres_extra)
 			else
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested SuperGroup ID")
-				return "SuperGroup ID: "..msg.to.id.."\nSuperUser ID: "..msg.from.id
+				return "SuperGroup ID:  "..msg.to.id.."\nSuperUser ID:  "..msg.from.id
 			end
 		end
 
@@ -1319,7 +1319,7 @@ local function run(msg, matches)
 				return "Create Link Use /setlink To Set Your Link"
 			end
 			savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested group link ["..group_link.."]")
-			return "*SuperGroup Link:\n\n"..group_link
+			return "SuperGroup Link:\n\n"..group_link
 		end
 
 		if matches[1] == "invite" and is_sudo(msg) then

@@ -221,6 +221,7 @@ function create_config( )
 	"inpm",
 	"inrealm",
 	"invite",
+	"leave",
 	"lockspam",
 	"locktag",
      -- "owners",

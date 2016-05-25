@@ -13,7 +13,7 @@
 
 ## tmux new-session -s script "bash steady.sh -t"
 
-_ ـــــــــــــــــــــــــــــــــــ 
+## ـــــــــــــــــــــــــــــــــــ 
 
 ## Private Message Commands
 | Command | Description |

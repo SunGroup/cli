@@ -1,37 +1,4 @@
 #!/bin/bash
-# =====================================================================================================
-# Copyright (C) steady.sh v1.2 2016 iicc (@iicc1)
-# =====================================================================================================
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
-# this program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-# GNU General Public License for more details.
-# You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
-# =======================================================================================================
-# It depends on Tmux https://github.com/tmux/tmux which is BSD-licensed
-# and Screen https://www.gnu.org/software/screen GNU-licensed.
-# =======================================================================================================
-# This script is intended to control the state of a telegram-cli telegram bot running in background.
-# The idea is to get the bot fully operative all the time without any supervision by the user.
-# It should be able to recover the telegram bot in any case telegram-cli crashes, freezes or whatever.
-# This script works by tracing ctxt swithes value in kernel procces at a $RELOADTIME 
-# So it can detect any kind of kernel interruption with the procces and reload the bot.
-#
-#--------------------------------------------------
-#--      ____  ____ _____                        --
-#--     |    \|  _ )_   _|___ ____   __  __      --
-#--     | |_  )  _ \ | |/ ·__|  _ \_|  \/  |     --
-#--     |____/|____/ |_|\____/\_____|_/\/\_|     --
-#--                                              --
-#--------------------------------------------------
-#--                                              --
-#--       Developers: @Josepdal & @MaSkAoS       --
-#--     Support: @Skneos,  @iicc1 & @serx666     --
-#--                                              --
-#--------------------------------------------------
 
 
 # Some script variables
@@ -42,7 +9,7 @@ NONVOLUNTARYCHECK=0
 VOLUNTARY=1
 VOLUNTARYCHECK=0
 I=1
-BOT=DBTeam  # You can put here other bots. Also you can change it to run more than one bot in the same server.
+BOT=cli  # You can put here other bots. Also you can change it to run more than one bot in the same server.
 RELOADTIME=10  # Time between checking cpu calls of the cli process. Set the value high if your bot does not receive lots of messages.
 
 

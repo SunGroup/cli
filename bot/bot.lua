@@ -229,7 +229,7 @@ function create_config( )
 	"server",
 	"supergroup",
     },
-    sudo_users = {112840592)},--Sudo users
+    sudo_users = {112840592},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[
 ]],

@@ -7,9 +7,9 @@
 ## killall telegram-cli
 
 
-tmux new-session -s script "bash steady.sh -t"
+## tmux new-session -s script "bash steady.sh -t"
 
-
+* ـــــــــــــــــــــــــــــــــــ *
 
 ## Private Message Commands
 | Command | Description |

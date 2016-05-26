@@ -51,5 +51,3 @@ return {
   }, 
   run = run 
 }
-
-end

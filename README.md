@@ -1,18 +1,12 @@
-## cd cli
-
-## git pull
-
-## kill $(pgrep telegram-cli) 
-
-## killall screen 
-
-## killall tmux 
-
-## killall telegram-cli
-
-
-## screen ./launch.sh
-
+```
+cd cli
+git pull
+kill $(pgrep telegram-cli) 
+killall screen 
+killall tmux 
+killall telegram-cli
+screen ./launch.sh
+```
 
 ## ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 

@@ -1,9 +1,10 @@
+
 local BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
 
 local function get_weather(location)
   print("Finding weather in ", location)
   local url = BASE_URL
-  url = url..'?q='..location
+  url = url..'?q='..location..'&APPID=eedbc05ba060c787ab0614cad1f2e12b'
   url = url..'&units=metric'
 
   local b, c, h = http.request(url)
@@ -12,12 +13,12 @@ local function get_weather(location)
   local weather = json:decode(b)
   local city = weather.name
   local country = weather.sys.country
-  local temp = 'The Temperature In '..city
+  local temp = 'The temperature in '..city
     ..' (' ..country..')'
     ..' is '..weather.main.temp..'°C'
-  local conditions = 'Current Conditions Are: '
+  local conditions = 'Current conditions are: '
     .. weather.weather[1].description
-  
+
   if weather.weather[1].main == 'Clear' then
     conditions = conditions .. ' ☀'
   elseif weather.weather[1].main == 'Clouds' then
@@ -30,24 +31,20 @@ local function get_weather(location)
 
   return temp .. '\n' .. conditions
 end
-
-local function run(msg, matches)
-  local city = 'Tehran'
-
-  if matches[1] ~= 'weather' then 
+local function run(msg, matches) 
     city = matches[1]
+  local wtext = get_weather(city)
+  if not wtext then
+    wtext = 'NOT Get Weather From That City'
   end
-  local text = get_weather(city)
-  if not text then
-    text = 'Can NOT Get Weather From That City'
-  end
-  return text
+  return wtext
 end
 
 return {
+
   patterns = {
-    "^[/#!][Ww][Ee][Aa][Tt][Hh][Ee][Rr]$",
-    "^[/#!][Ww][Ee][Aa][Tt][Hh][Ee][Rr] (.*)$"
-  }, 
-  run = run 
+   "^[/!#][Ww]eather (.*)$",
+    },
+  run = run
 }
+

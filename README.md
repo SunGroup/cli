@@ -1,11 +1,13 @@
 ```
 cd cli
 git pull
+rm -r ../.telegram-cli/state
 kill $(pgrep telegram-cli) 
 killall screen 
 killall tmux 
 killall telegram-cli
 screen ./launch.sh
+
 ```
 
 ## ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
@@ -130,7 +132,7 @@ screen ./launch.sh
 | [#!/]delcontact | Delete bot contact. | Y | Y | Y |
 | [#!/]reload | Reloads all bot plugins | Y | Y | Y |
 | [#!/]updateid | Adds long_id to moderation data for groups. | Y | Y | Y |
-| [#!/]!bc [GroupID] [text] | This command will send text to [GroupID]| Y | Y | Y |
+| [#!/]bc [GroupID] [text] | This command will send text to [GroupID]| Y | Y | Y |
 | [#!/]leave | Bot will leave that group and can only be re-invited by an admin with bot phone number | Y | Y | Y |
 | [#!/]mp | (Mod Promote) Set user as a mod of supergroup. **TESTING** | N | Y | N |
 | [#!/]md | (Mod demote) Removes user from mod of supergroup. **TESTING**| N | Y | N |
